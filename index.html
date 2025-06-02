@@ -1,12 +1,12 @@
 <!-- Unit 13 Project
 Requirements
 [  ] Two Interactive Drop-down Inputs 
-[  ] Two Different jQuery Animation Methods 
-[  ] Add Five CSS Declarations
-[  ] Include Three Images
+[xx] Two Different jQuery Animation Methods 
+[ xxxxx ] Add Five CSS Declarations
+[ xxx] Include Three Images
 
 Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Google Font
+[ yes ] Feature 1 - Google Font
 [ no ] Feature 2 - Upload a Font
 [ no ] Feature 3 - .mouseover() Method
 [ no ] Feature 4 - :hover Feature 
@@ -19,22 +19,27 @@ Select ONE Additional Feature to Add
     <meta charset="utf-8" />
     <title>Unit 13 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonbon&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1 id="title">Quiz About ME!!!</h1>
+    <img id= "flower" src= "https://clipart-library.com/2023/pink-flowers-clipart-md.png"
+         width= "100">
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">To All The Boys Ive Loved Before</option>
+          <option value="movie2">Mamma Mia</option>
+          <option value="movie3">10 Things I Hate About You</option>
+          <option value="movie4">Ferris Bueller's Day Off</option>
         </select>
       </label>
-      <button type="submit">Check Movie Answer</button>
+      <button type="submit">are you right YES or NAUR</button>
     </form>
     <div id="movie-result"></div>
     <hr />
@@ -43,17 +48,30 @@ Select ONE Additional Feature to Add
       <label>
         📖 What is my favorite book?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="book1">The Dead Romantics</option>
+          <option value="book2">The Aupairs</option>
+          <option value="book3">The Fault in Our Stars</option>
+          <option value="book4">Summer of Salt</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">are you right YES or NAUR</button>
     </form>
     <div id="book-result"></div>
+    <div id="imageContainer">
+  <img id="tatbilb" src="https://m.media-amazon.com/images/I/71TsljeDmxL._AC_UF1000,1000_QL80_.jpg" alt="lj" style="display:grid; max-width: 300px;">
+</div>
+    <div id="imageContainer">
+  <img id="sumofsalt" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1507335581i/35230420.jpg" alt="sos" style="display:grid; max-width: 300px;">
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("#sumofsalt").hide();
+      $("#tatbilb").hide();
+      $("#flower").hide();
+      $("#title").hide();
+      $("#flower").fadeIn(1000, function(){
+      $("#title").slideDown(3000);
+      });
       //Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
         event.preventDefault();
@@ -63,6 +81,7 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie1") {
           $("#movie-result").text("YESSSS!");
+          $("#tatbilb").fadeIn(1000);
         } else {
           $("#movie-result").text("Try Again!");
         }
@@ -75,10 +94,11 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
+        if (answer === "book4") {
           $("#book-result").text("YESSSS!");
+           $("#sumofsalt").fadeIn(1000);
         } else {
-          $("#book-result").text("Try Again!");
+          $("#book-result").text("love this too but no!");
         }
       });
     </script>
