@@ -1,6 +1,7 @@
 #movie-result {
-  background: rgb(244, 98, 181);
-  border: 5px solid black;
+  background: rgb(251, 209, 207);
+  border: 5px dotted pink;
+  font-family: "bonbon", system-ui;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -8,8 +9,9 @@
 }
 
 #book-result {
-  background: rgb(196, 159, 255);
-  border: 5px solid black;
+  background: rgb(204, 204, 255);
+  border: 5px dotted rgb(207, 159, 255);
+  font-family:"bonbon", system-ui;
   font-size: 24px;
   height: 160px;
   margin-top: 10px;
@@ -20,3 +22,14 @@ hr {
   height: 5px;
   background-color: black;
 }
+.bonbon-regular {
+  font-family: "Bonbon", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  font-family: "Bonbon", system-ui;
+  font-size:47px;
+}
+body {
+  background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y5ODNiYXRjaDItMTYteC5qcGc.jpg')
